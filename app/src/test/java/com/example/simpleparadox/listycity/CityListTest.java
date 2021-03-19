@@ -98,6 +98,9 @@ class CityListTest {
     void deleteAllCities() {
         CityList cityList = mockCityList();
 
-        assertEquals(1, cityList.deleteAll());
+        // deletes all cities
+        cityList.deleteAll();
+        // now that it is all deleted, there should be no cities in the list
+        assertEquals(0, cityList.countCities());
     }
 }
